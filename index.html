@@ -45,10 +45,16 @@
     #header {
       background: #fff !important;
       box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-      padding: 5px 0;
+      padding: 10px 0;
+    }
+
+    /* NAVBAR HEIGHT */
+    #header .container-xl {
+        min-height: 130px;
+        display: flex;
+        align-items: center;
     }
     /* FIXED: removed height:52px override so logo can be any size */
-    #header .logo img { height: 100px !important; width: auto !important; }
     #header .logo h1.sitename { display: none; }
     .navmenu a { color: var(--text-dark) !important; font-weight: 500; font-size: 0.95rem; }
     .navmenu a:hover, .navmenu a.active { color: var(--primary) !important; }
@@ -60,6 +66,15 @@
       font-weight: 600 !important;
       font-size: 0.9rem !important;
       transition: all 0.3s !important;
+    }
+
+    /* LOGO */
+    #header .logo img {
+      height: 150px !important;
+      width: auto !important;
+      max-height: none !important;
+      object-fit: contain;
+      display: block;
     }
     .btn-getstarted:hover { background: var(--primary-dark) !important; transform: translateY(-1px) !important; }
 
@@ -476,7 +491,13 @@
       .hero-mini-stats { flex-wrap: wrap; gap: 16px; }
       .sec-title h2 { font-size: 1.8rem; }
       .flow-row { gap: 8px; }
-      #header .logo img { height: 70px !important; }
+        #header .logo img {
+    height: 110px !important;
+  }
+
+  #header .container-xl {
+    min-height: 100px;
+  }
     }
     @media (max-width: 767px) {
       .hero h1 { font-size: 1.8rem; }
@@ -485,7 +506,13 @@
       .about-badge { display: none; }
       .flow-row { flex-direction: column; }
       .flow-arrow { transform: rotate(90deg); }
-      #header .logo img { height: 55px !important; }
+       #header .logo img {
+    height: 85px !important;
+  }
+
+  #header .container-xl {
+    min-height: 80px;
+  }
     }
   </style>
 </head>
